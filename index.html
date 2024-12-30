@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Periódico Digital Completo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: #0d1117;
+            color: #c9d1d9;
+            margin: 0;
+            padding: 0;
+        }
+        .navbar {
+            background-color: #161b22;
+            border-bottom: 3px solid #58a6ff;
+        }
+        .navbar-brand {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #58a6ff;
+        }
+        .navbar-nav .nav-link {
+            color: #c9d1d9;
+            transition: color 0.3s;
+        }
+        .navbar-nav .nav-link:hover {
+            color: #58a6ff;
+        }
+        .headline-section {
+            background: #161b22;
+            padding: 30px 20px;
+        }
+        .main-headline {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        .main-headline img {
+            width: 100%;
+            max-height: 300px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+        .main-headline h1 {
+            font-size: 2rem;
+            color: #58a6ff;
+            margin-bottom: 10px;
+        }
+        .main-headline p {
+            color: #c9d1d9;
+            font-size: 1rem;
+        }
+        .secondary-headlines {
+            list-style: none;
+            padding: 0;
+        }
+        .secondary-headlines li {
+            display: flex;
+            margin-bottom: 15px;
+            align-items: center;
+        }
+        .secondary-headlines img {
+            width: 100px;
+            height: 70px;
+            object-fit: cover;
+            border-radius: 5px;
+            margin-right: 10px;
+        }
+        .secondary-headlines a {
+            color: #c9d1d9;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s;
+        }
+        .secondary-headlines a:hover {
+            color: #58a6ff;
+        }
+        .section-title {
+            margin-top: 40px;
+            margin-bottom: 20px;
+            font-weight: bold;
+            text-align: center;
+            color: #58a6ff;
+        }
+        .card {
+            background: #21262d;
+            border: none;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.8);
+        }
+        .card img {
+            height: 200px;
+            object-fit: cover;
+        }
+        footer {
+            background: #0d1117;
+            color: #c9d1d9;
+            padding: 20px;
+            text-align: center;
+        }
+        footer a {
+            color: #58a6ff;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        footer a:hover {
+            color: #1f6feb;
+        }
+
+        .hero {
+    background: radial-gradient(circle, #161b22, #0d1117);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #c9d1d9;
+    padding: 20px;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+}
+
+.hero .btn {
+    background-color: #58a6ff;
+    color: #0d1117;
+    font-size: 1.2rem;
+    padding: 10px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.hero .btn:hover {
+    transform: scale(1.1);
+    background-color: #1f6feb;
+}
+
+    </style>
+</head>
+<body>
+    <!-- Encabezado -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="#">Periódico Digital</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="#">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Tecnología</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Cultura</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Deportes</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Titulares Principales -->
+    <div class="headline-section container">
+        <div class="row">
+            <div class="col-md-8 main-headline">
+                <img src="https://via.placeholder.com/800x300" alt="Titular Principal">
+                <h1>El Impacto de la IA en la Vida Cotidiana</h1>
+                <p>Cómo la inteligencia artificial está transformando nuestras vidas y redefiniendo el futuro.</p>
+            </div>
+            <div class="col-md-4">
+                <ul class="secondary-headlines">
+                    <li>
+                        <img src="https://via.placeholder.com/100x70" alt="Titular Secundario 1">
+                        <a href="#">Revolución en Tecnología: Últimas Innovaciones</a>
+                    </li>
+                    <li>
+                        <img src="https://via.placeholder.com/100x70" alt="Titular Secundario 2">
+                        <a href="#">Arte Digital: Futuro y Presente</a>
+                    </li>
+                    <li>
+                        <img src="https://via.placeholder.com/100x70" alt="Titular Secundario 3">
+                        <a href="#">Deportes Electrónicos en Auge</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+        <!-- Hero -->
+        <section class="hero">
+            <div>
+                <h1>Descubre el Futuro Hoy</h1>
+                <p>Explora las historias que están cambiando el mundo.</p>
+                <a href="#" class="btn">Explorar Noticias</a>
+            </div>
+        </section>
+
+    <!-- Secciones de Noticias -->
+    <div class="container">
+        <h2 class="section-title">Tendencias</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <img src="https://via.placeholder.com/400x200" class="card-img-top" alt="Tendencia 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Novedades en Tecnología</h5>
+                        <p class="card-text">Descubre las innovaciones que están cambiando el mundo.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <img src="https://via.placeholder.com/400x200" class="card-img-top" alt="Tendencia 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Arte Digital en Auge</h5>
+                        <p class="card-text">La creatividad se une con la tecnología en nuevas formas de expresión.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <img src="https://via.placeholder.com/400x200" class="card-img-top" alt="Tendencia 3">
+                    <div class="card-body">
+                        <h5 class="card-title">El Futuro del Deporte</h5>
+                        <p class="card-text">Cómo los deportes electrónicos están ganando terreno.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pie de Página -->
+    <footer>
+        <p>&copy; 2024 Periódico Digital. Todos los derechos reservados. <a href="#">Política de privacidad</a> | <a href="#">Términos y condiciones</a></p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
